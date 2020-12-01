@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,400;1,700&display=swap');
+
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1; 
+}
+
+header {
+  max-width: 100%;
+  margin: 1.875rem 0px;
+  text-align: center;
+  padding: 0 0.625rem;
+}
+
+#title {
+  font-size: 2em;
+  font-weight: inherit;
+  margin-bottom: 5px;
+}
+
+#description {
+  font-style: italic;
+  font-weight: 200;
+  font-size: 1.1rem;
+}
+
+#survey-form {
+  display: grid;
+  grid-template-rows: repeat(9, auto);
+  justify-self: center;
+  align-items: center;
+  grid-gap: 1.5em;
+  padding: 2.5rem;
+  background-color: var(--color-darkblue-alpha);
+  border-radius: 4px;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  -ms-border-radius:4px;
+  -o-border-radius:4px;
+}
+
+.form_item {
+  display: grid;
+  width: 100%;
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 0.1em 0;
+  align-items: center;
+}
+
+.form_item label, .form_item p {
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+}
+
+.form_item label span {
+  font-size: 0.9rem;
+}
+
+.form_item .form_control {
+  display: block;
+  width: 100%;
+  height: 2.4rem;
+  padding: 0px 0.625rem;
+  color: var(--color-darkblue-alpha);
+  font-size: 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border: none;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.form_item .form_control::placeholder {
+  color: var(--color-darkblue-alpha);
+}
+
+.form_item label {
+  margin-bottom: 0.3em;
+}
+
+.form_item label input[type="checkbox"],
+.form_item label input[type="radio"]{
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  margin-right: 0.8em;
+}
+
+
+.form_control option {
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--color-darkblue);
+}
+
+option:disabled {
+  color: -internal-light-dark(graytext, rgba(170, 170, 170, 0.2));
+}
+
+.input-textarea {
+  padding: 0.5em;
+  color: var(--color-darkblue-alpha);
+  font-size: 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  max-height: 120px;
+  resize: vertical; 
+}
+
+#submit {
+  width: 100%;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  cursor: pointer;
+}
+
+/*   ---------------------------------- */
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  #survey-form {
+    padding: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 540px) and (max-width:767px){
+  .container {
+    max-width: 540px;
+  }
+}
